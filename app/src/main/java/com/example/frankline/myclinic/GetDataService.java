@@ -30,7 +30,7 @@ public interface GetDataService {
 
     @FormUrlEncoded
     @POST("api/login")
-    Call<UserToken> getLoginToken(@Field("username") String username, @Field("password") String password);
+    Call<UserToken> getLoginToken(@Field("email") String username, @Field("password") String password);
 
     @FormUrlEncoded
     @POST("api/register")
