@@ -29,11 +29,11 @@ public interface GetDataService {
     Call<Retro> deleteBooking(@Path("id") int id);
 
     @FormUrlEncoded
-    @POST("login")
-    Call<UserToken> getLoginToken(@Field("username") String username, @Field("password") String password);
+    @POST("api/login")
+    Call<UserToken> getLoginToken(@Field("email") String username, @Field("password") String password);
 
     @FormUrlEncoded
-    @POST("login")
+    @POST("api/register")
     Call<UserToken> registerUser(@Field("username") String username, @Field("phone") String phone, @Field("password") String password);
 
 //    @Headers({
