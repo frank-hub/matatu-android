@@ -80,9 +80,9 @@ public class Login extends AppCompatActivity {
     }
 
     private void showToken(UserToken body) {
-        Cache.setAuthToken(this,body.authToken);
+        Cache.setAuthToken(this,body.token.authToken);
         if(Cache.hasAuthToken(this)){
-            Cache.setAuthToken(this,body.authToken);
+            Cache.setAuthToken(this,body.token.authToken);
             Intent i = new Intent(this, MainActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|
                     Intent.FLAG_ACTIVITY_CLEAR_TASK |
