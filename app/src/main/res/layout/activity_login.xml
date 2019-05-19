@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <EditText
+            android:id="@+id/userEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="216dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="72dp"
+            android:autofillHints="username"
+            android:drawableStart="@drawable/ic_account_box_black_24dp"
+            android:drawableLeft="@drawable/ic_account_box_black_24dp"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/passEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/userEdit"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="298dp"
+            android:autofillHints="no"
+            android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="numberPassword" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="93dp"
+            android:layout_marginLeft="93dp"
+            android:layout_marginBottom="93dp"
+            android:background="@color/colorSuccess"
+            android:onClick="loginMethod"
+            android:text="Login"
+            android:textColor="#ffff" />
+
+        <TextView
+            android:id="@+id/imageView"
+            android:layout_width="167dp"
+            android:layout_height="190dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginRight="102dp"
+            android:fontFamily="monospace"
+            android:text="E-Matatu"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/registerTxt"
+            android:layout_width="143dp"
+            android:layout_height="31dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="119dp"
+            android:layout_marginRight="119dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:onClick="register"
+            android:text="Get Signed Up" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

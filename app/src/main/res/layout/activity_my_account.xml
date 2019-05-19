@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MyAccount">
+
+
+    <TextView
+        android:id="@+id/update_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Profile"
+        android:paddingTop="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="8dp"
+        android:drawableLeft="@drawable/ic_account_box_black_24dp"
+        android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                            />
+
+    <TextView
+        android:id="@+id/change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+        android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:paddingTop="8dp"
+        android:layout_marginLeft="8dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appointments"
+        android:layout_marginTop="5dp"
+        android:paddingTop="8dp"
+        android:drawableLeft="@drawable/ic_date_range_black_24dp"
+        android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="appoitment"
+        android:text="My Bookings"
+        />
+</LinearLayout>

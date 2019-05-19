@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HealthTips">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:background="@drawable/food"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/rowname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take Care Of Food"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categorie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avoid unhealthy food that is high in calories. They gradually take a toll on your health leading to weight gain, heart diseases and cholesterol. Eat seasonal fruits that are rich in fibers, vitamins and proteins." />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/thumbnil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/breakfast"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/rownme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breakfast Is A Must"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categrie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Never skip breakfast, our metabolic rate decreases leading to weight gain and digestion problems. Breakfast increases concentration, helps us focus better and controls weight." />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/thumbailo"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:background="@drawable/hands"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/roname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Washing your hands."
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/caegorie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hand sanitizers were invented for a reason. If your hands are dirty, you clean them. But after that you STOP. You have to. If you keep feeding your hands with sanitizers just like a loving mom feeds her baby with plain yogurt." />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/thumbail"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:background="@drawable/myclinic"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/rownam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avoid Mindless Eating"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You are hungry, you eat. You are bored, you eat. You are angry, you eat. And you are lazy to do your chores, you eat again. Unless otherwise you have plans of getting shifted to a hospital permanently, DON’T do this." />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
