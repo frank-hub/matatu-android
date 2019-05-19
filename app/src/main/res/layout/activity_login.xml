@@ -12,7 +12,16 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
+        <TextView
+            android:layout_margin="4dp"
+            android:visibility="gone"
+            android:id="@+id/tvMessage"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <EditText
+            android:layout_below="@+id/tvMessage"
             android:id="@+id/userEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
