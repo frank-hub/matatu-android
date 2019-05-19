@@ -32,6 +32,10 @@ public interface GetDataService {
     @POST("login")
     Call<UserToken> getLoginToken(@Field("username") String username, @Field("password") String password);
 
+    @FormUrlEncoded
+    @POST("login")
+    Call<UserToken> registerUser(@Field("username") String username, @Field("phone") String phone, @Field("password") String password);
+
 //    @Headers({
 //            "Accept:application/json",
 //            "AUTH:API"

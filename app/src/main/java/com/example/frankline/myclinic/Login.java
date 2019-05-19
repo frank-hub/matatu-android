@@ -21,6 +21,7 @@ public class Login extends AppCompatActivity {
     EditText username,password;
     private ProgressDialog progressDialog;
     private TextView tvMessage;
+    private Button loginBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +35,15 @@ public class Login extends AppCompatActivity {
         username = (EditText) findViewById(R.id.userEdit);
         password = (EditText) findViewById(R.id.passEdit);
         tvMessage = findViewById(R.id.tvMessage);
-
+        loginBtn = findViewById(R.id.loginBtn);
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                attemptLogin();
+            }
+        });
     }
-    public void loginMethod(View v){
-
-        attemptLogin();
-
-    }
+    
     public void register(View v){
         Intent main = new Intent(Login.this,RegisterActivity.class);
         startActivity(main);
@@ -66,7 +69,7 @@ public class Login extends AppCompatActivity {
                         if(response.isSuccessful()){
                             showToken(response.body());
                         }else{
-                            tvMessage.setText("Sorry, invalid passenger username or password.");
+                            tvMessage.setText("Sorry, invalid  username or password.");
                             tvMessage.setVisibility(View.VISIBLE);
                         }
                     }
