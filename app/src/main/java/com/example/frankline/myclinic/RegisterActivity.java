@@ -20,6 +20,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText userName;
     private EditText phone;
     private EditText password;
+    private EditText c_password;
+    private EditText email;
     private Button btnRegister;
     private ProgressDialog progressDialog;
 
@@ -27,9 +29,12 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        userName = findViewById(R.id.editText2);
-        phone = findViewById(R.id.editText3);
-        password = findViewById(R.id.editText4);
+        userName = findViewById(R.id.name);
+        phone = findViewById(R.id.phone);
+        password = findViewById(R.id.password);
+        c_password = findViewById(R.id.password);
+        email = findViewById(R.id.email);
+
         btnRegister = findViewById(R.id.button);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
