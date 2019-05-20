@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -81,6 +82,8 @@ public class RegisterActivity extends AppCompatActivity {
                             showToken(response.body());
                         }else{
                             showMessage("User could not be registered...try again.");
+                            showMessage(""+response.toString());
+                            Log.e("WB",response.raw().body().toString());
                         }
                     }
 
