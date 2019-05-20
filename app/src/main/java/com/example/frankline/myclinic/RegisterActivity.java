@@ -30,12 +30,17 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
         userName = findViewById(R.id.name);
         email = findViewById(R.id.email);
         phone = findViewById(R.id.phone);
         password = findViewById(R.id.password);
         confirmPassword = findViewById(R.id.c_password);
         btnRegister = findViewById(R.id.button);
+
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
