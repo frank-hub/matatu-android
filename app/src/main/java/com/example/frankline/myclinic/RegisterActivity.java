@@ -3,6 +3,7 @@ package com.example.frankline.myclinic;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,10 +19,10 @@ import retrofit2.Retrofit;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText userName;
+    private EditText email;
     private EditText phone;
     private EditText password;
-    private EditText c_password;
-    private EditText email;
+    private EditText confirmPassword;
     private Button btnRegister;
     private ProgressDialog progressDialog;
 
@@ -30,11 +31,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         userName = findViewById(R.id.name);
+        email = findViewById(R.id.email);
         phone = findViewById(R.id.phone);
         password = findViewById(R.id.password);
-        c_password = findViewById(R.id.password);
-        email = findViewById(R.id.email);
-
+        confirmPassword = findViewById(R.id.c_password);
         btnRegister = findViewById(R.id.button);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -47,18 +47,27 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void registerUser() {
         String username = this.userName.getText().toString();
+        String email = this.email.getText().toString();
+        String confirm_password = this.confirmPassword.getText().toString();
         String phone = this.phone.getText().toString();
         String password = this.password.getText().toString();
 
-        if(username.isEmpty() || password.isEmpty()){
+        if(username.isEmpty() || password.isEmpty() || email.isEmpty() || confirm_password.isEmpty() ||
+            phone.isEmpty()){
             showMessage("Empty credentials are not allowed");
             return;
         }
+
+        if(!password.equals(confirm_password)){
+            showMessage("Passwords do not match.");
+            return;
+        }
+
         progressDialog.setMessage("Registering user ...");
         progressDialog.show();
         Retrofit retrofit =  RetrofitClientInstance.getRetrofitInstance();
         retrofit.create(GetDataService.class)
-                .registerUser(username,phone,password)
+                .registerUser(email,username,phone,password)
                 .enqueue(new Callback<UserToken>() {
                     @Override
                     public void onResponse(Call<UserToken> call, Response<UserToken> response) {
